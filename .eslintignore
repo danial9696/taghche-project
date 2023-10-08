@@ -1,0 +1,18 @@
+
+#Ignore next config
+next.config.js
+
+#Ignore commitlint config
+commitlint.config.js
+
+# Css & Scss files
+*.scss
+*.css
+*.scss.module
+
+bundle-icons-react.js
+bundle-icons-react.d.ts
+
+sentry-example-page.js
+
+src/@core
