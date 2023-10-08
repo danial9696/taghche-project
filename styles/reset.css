@@ -1,0 +1,167 @@
+/*  =========================================================================
+    reset
+    A thin layer on top of normalize.css that provides a starting point more
+    suitable for web applications. Removes the default spacing and border for
+    appropriate elements.
+    =========================================================================
+*/
+
+/**
+ * 1. Set the global `box-sizing` state to `border-box`. As per:
+ *    paulirish.com/2012/box-sizing-border-box-ftw
+ * 2. Fonts on OSX will look more consistent with other systems that do not
+ *    render text using sub-pixel anti-aliasing.
+ */
+html {
+  box-sizing: border-box;
+  /* [1] */
+  min-height: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  /* [2] */
+  -webkit-font-smoothing: antialiased;
+  /* [2] */
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+button {
+  background-color: transparent;
+  color: inherit;
+  border-width: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+figure {
+  margin: 0;
+}
+
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+/**
+ * The usual resetting of margins, paddings, borders etc.
+ */
+blockquote,
+dl,
+dd,
+ol,
+ul,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+pre,
+fieldset,
+hr {
+  margin: 0;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+cite {
+  font-style: normal;
+}
+
+fieldset {
+  border-width: 0;
+  padding: 0;
+  margin: 0;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+ol,
+ul {
+  padding: 0;
+}
+
+iframe,
+fieldset {
+  border: 0;
+}
+
+ul,
+ol,
+dd {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/**
+ * Suppress the focus outline on links that cannot be accessed via keyboard.
+ * This prevents an unwanted focus outline from appearing around elements that
+ * might still respond to pointer events.
+ */
+[tabindex='-1']:focus {
+  outline: none !important;
+}
+
+/**
+ * 1. Single taps should be dispatched immediately on clickable elements
+ */
+a,
+area,
+button,
+input,
+label,
+select,
+textarea,
+[tabindex] {
+  -ms-touch-action: manipulation;
+  /* [1] */
+  touch-action: manipulation;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  /* Apparently some margin are still there even though it's hidden */
+  margin: 0;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+  /* Firefox */
+  appearance: textfield;
+  /* Firefox */
+}
+
+[hreflang] > abbr[title] {
+  text-decoration: none;
+}
+
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+hr {
+  display: block;
+  margin: 1em 0;
+  padding: 0;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+}
+
+.logo {
+  width: 90px;
+}
+
+.logo path {
+  fill: #ff0000;
+  /* Replace with your desired color */
+}
